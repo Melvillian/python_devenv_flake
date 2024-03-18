@@ -1,19 +1,23 @@
-[tool.poetry]
+[tool.black]
+line-length = 88
+target-version = ['py311']
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = "E203"
+
+[project]
 name = "python_devenv_flake"
 version = "0.1.0"
-description = ""
-authors = ["Alex Melville"]
-# readme = "README.md"
-# license = "BSD"
-packages = [{ include = "python_devenv_flake" }]
+description = "My awesome Python project!"
+authors = [{ name = "Alex Melville" }]
 
-[tool.poetry.dependencies]
-python = "^3.10"
-requests = "^2.31.0"
-
-[tool.poetry.scripts]
-main = "python_devenv_flake.main:main"
+requires-python = ">=3.11"
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
