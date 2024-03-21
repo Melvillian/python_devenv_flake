@@ -1,4 +1,4 @@
-from python_devenv_flake.lib.replace_me import get, post, patch
+from lib.replace_me import get, post, patch
 
 
 # This is the entrypoint to your program

@@ -7,11 +7,11 @@ burrito 🌯
 
 To make it easy to get started with Python.
 
-## Cloning The Repo
+## Getting Started
 
 Use these instructions to initialize a new git repository named
 `my_new_python_project` using this flake as a template. Note, you must have
-already created the `my_new_python_project` repo on GitHub
+already created the `my_new_python_project` repo on GitHub.
 
 ```bash
 # clone existing repo
@@ -20,11 +20,10 @@ git clone git@github.com:Melvillian/python_devenv_flake.git my_new_python_projec
 # cd and update the pyproject.toml config so the name of your package is correct
 cd my_new_python_project
 sed -i '' 's/python_devenv_flake/my_new_python_project/g' pyproject.toml
-mv python_devenv_flake my_new_python_project
-git add .
-git commit
 
 # update the remote origin on GitHub
+git add .
+git commit
 git remote add origin git@github.com:<YOUR_USERNAME>/my_new_python_project.git
 git push -u origin main
 
@@ -34,13 +33,10 @@ git push -u origin main
 ## Getting Started
 
 ```bash
-nix develop
-# create a virtual venv if you haven't already
-python3 -m venv ~/path/to/virtualenvs/my_new_python_project
-source ~/path/to/virtualenvs/my_new_python_project/bin/activate
+nix develop # so easy!
 
 # make sure you can run the main script
-python3 main.py
+python main.py
 ```
 
 ## Updating Python Dependencies
